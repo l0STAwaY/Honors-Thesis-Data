@@ -1,0 +1,30 @@
+
+exp: TextClassification 
+
+mode:
+    - evaluate
+    - analyze
+
+models:
+  hf_text_classification_model:
+    - ../Honors_Research/Model/Pretrain_Public_Model
+      
+datafpath: ../Honors_Research/Data/test_data_cleaned_temp.tsv
+
+predfpath: ../Honors_Research/predictions/model_prediction.tsv
+
+resultsfpath: ../Honors_Research/results/model_results.tsv
+
+device: cuda
+
+seed: 315
+
+giveAllLabels: True
+
+save: by_cond
+
+conditions:
+
+id2label:          
+    0: Fail
+    1: Success
